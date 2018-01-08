@@ -1,0 +1,42 @@
+{% extends 'layout.html'%} {% block head%} {%parent%}
+<link rel="stylesheet" href="/public/css/web.code.css"> {% endblock%} {%block content%}
+<div class="navTitle">
+    <span>源码案例</span>
+</div>
+<div class="categoryList">
+    {% for item in category%}
+    {% if item.code.length > 0%}
+    <a href="/code/category/{{item.category}}">{{item.category}}</a>
+    {% endif %}
+    {% endfor %}
+</div>
+<div class="list">
+    <div class="listBox">
+        {% for code in list %}
+        <div class="code">
+            <div class="imgBox">
+                <img src="{{code.codeImg}}" alt="案例图片">
+            </div>
+            <h2>
+                <a href="{{code.infoSrc}}">{{code.codeTitle}}</a>
+            </h2>
+            <div class="optionArea">
+                <a href="{{code.infoSrc}}">
+                    <i class="iconfont icon-yuedu"></i>
+                    <span>查看详情</span>
+                </a>
+                <a href="{{code.viewSrc}}" target="_blank">
+                    <i class="iconfont icon-view"></i>
+                    <span>预览地址</span>
+                </a>
+                <a href="{{code.downSrc}}" target="_blank">
+                    <i class="iconfont icon-down"></i>
+                    <span>源码地址</span>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% include './common/page.html'%}
+</div>
+{%endblock%}

@@ -1,0 +1,22 @@
+{%extends 'layout.html'%} {%block head%} {%parent%} 
+<link rel="stylesheet" href="/public/css/cms.com.css"> {%endblock%} 
+{%block content%} {% include 'slide.html'%}
+<div class="editMark">
+    <input type="hidden" id="linkId" value="{{link.linkId}}">
+    <div>
+        <span class="title">链接名称：</span>
+        <input type="text" class="form-control" id="linkTitle" value="{{link.linkTitle}}">
+    </div>
+    <div>
+        <span class="title">链接地址：</span>
+        <input type="text" class="form-control" id="linkUrl" value="{{link.linkUrl}}">
+    </div>
+    <div class="btnArea">
+        <button id="saveBtn">保存</button>
+        <button id="pushBtn">发布</button>
+        <button id="resetBtn">重置</button>
+    </div>
+</div>
+{%endblock%} {%block script%} {%parent%} 
+<script src="/public/js/cms.link.js"></script>
+{%endblock%}

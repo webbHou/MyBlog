@@ -1,0 +1,39 @@
+{% extends 'layout.html'%} {% block head %} {%parent%}
+<link rel="stylesheet" href="/public/css/web.blog.css">
+{% endblock%} {% block content%}
+<div class="navTitle"><span>学无止境</span></div>
+<div class="categoryList">
+    {% for item in category%}
+    {% if item.blog.length > 0%}
+    <a href="/blog/category/{{item.category}}">{{item.category}}</a>
+    {% endif %}
+    {% endfor %}
+</div>
+<div class="list">
+    {% for blog in list %}
+    <div class="blog">
+        <div class="title">
+            <h2><a href="/blog/blog/{{blog.blogId}}">{{blog.blogTitle}}</a></h2>
+            <div class="view">
+                <span>
+                    <i class="iconfont icon-ren"></i>周壮</span>
+                <span>
+                    <i class="iconfont icon-yuedu"></i>阅读（{{blog.click}}）</span>
+                <span>
+                    <i class="iconfont icon-riqi"></i>{{blog.createDate}}</span>
+                <span>
+                    <i class="iconfont icon-wenjianjia"></i>
+                    <a href="/blog/category/{{blog.category}}">{{blog.category}}</a>
+                </span>
+            </div>
+        </div>
+        
+        <div class="content">
+           {{blog.content}}
+        </div>
+    </div>
+    {% endfor %}
+    {% include './common/page.html'%}
+</div>
+
+{% endblock%}

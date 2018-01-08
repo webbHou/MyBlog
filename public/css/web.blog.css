@@ -1,0 +1,132 @@
+.main .list .blog {
+  padding: 15px;
+  margin-top: 20px;
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #e7ecf1;
+}
+.main .blog {
+  width: 100%;
+}
+.main .blog .title {
+  width: 100%;
+  user-select: none;
+  border-bottom: solid 1px #efefef;
+  cursor: pointer;
+}
+.main .blog .title h2 a {
+  text-decoration: none;
+  color: #000;
+}
+.main .blog .title h2 a:hover {
+  color: #0cc8e9;
+}
+.main .blog .content {
+  width: 100%;
+  line-height: 28px;
+  margin-top: 10px;
+}
+.main .blog .view {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+}
+.main .blog .view span {
+  margin-right: 10px;
+}
+.main .blog .view span i {
+  margin-right: 5px;
+}
+.main .blog .view a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+.main .blog .view a:hover {
+  color: #0cc8e9;
+}
+.main .blog .blogContent {
+  padding: 80px 120px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #e7ecf1;
+  box-sizing: border-box;
+}
+.main .blog .blogContent .title {
+  margin: 0 0 8px 0;
+  color: #5a687e;
+}
+.main .blog .blogContent .view {
+  margin-bottom: 8px;
+  font-weight: 100;
+  font-size: 12px;
+}
+.main .blog .blogContent #content {
+  line-height: 30px;
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 20px;
+}
+.main .blog .blogContent #content h2 {
+  margin: 20px 0;
+}
+.main .blog .blogContent #content h3 {
+  margin: 10px 0;
+}
+.main .blog .blogContent #content ul {
+  margin: 10px 20px;
+}
+.main .blog .blogContent #content pre {
+  margin: 10px 0;
+}
+.main .blog .blogContent #content pre code {
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.main .blog .blogContent #content blockquote {
+  margin: 10px 0;
+}
+.main .blog .blogContent #content blockquote p {
+  width: 100%;
+  background: #fafafa;
+  padding: 10px 20px;
+  border-left: solid 5px #efefef;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.main .blog .blogContent #content img {
+  display: block;
+  margin: 20px 0;
+  width: 100%;
+}
+.main .blog .blogContent #content table {
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+.main .blog .blogContent #content table td,
+.main .blog .blogContent #content table th {
+  border: 1px solid #efefef;
+  padding: 5px 10px 5px 7px;
+}
+.main .blog .blogContent #content table th {
+  font-size: 1.1em;
+  background-color: #eaeaea;
+}
+.main .blog .blogContent #content table tr:nth-of-type(2n) td {
+  background-color: #eaeaea;
+}
+.main .blog .blogContent .pageBox {
+  width: 100%;
+  margin: 30px 0;
+}
+.main .blog .blogContent .pageBox p {
+  line-height: 30px;
+}
+.main .blog .blogContent .pageBox p a {
+  text-decoration: none;
+  color: #000;
+}
+.main .blog .blogContent .pageBox p a:hover {
+  color: #0cc8e9;
+}

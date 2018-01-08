@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>后台管理</title>
+    {%block head%}
+    <link rel="stylesheet" href="/public/css/cms.layout.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_465656_rb0y117zpi5ghkt9.css"> {%endblock%}
+</head>
+
+<body>
+    <div class="nav">
+        <ul class="navlist">
+            <li><a href="/cms/blog">博客</a></li>
+            <li><a href="/cms/code">案例</a></li>
+            <li><a href="/cms/book">书籍</a></li>
+            <li><a href="/cms/link">友链</a></li>
+            <li><a id="set">设置</a></li>
+            <li><a href="/cms/exit">退出</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    {% include 'set.html'%}
+
+    {% block script %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/public/js/cms.common.js"></script>
+    {% endblock%}
+</body>
+
+</html>

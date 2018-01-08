@@ -1,0 +1,419 @@
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    color: #545454;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.ml10 {
+    margin-left: 10px;
+}
+
+.none {
+    display: none;
+}
+
+
+/* nav */
+
+.nav {
+    width: 100%;
+    height: 50px;
+    background: #333;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.nav .logo {
+    width: 100px;
+    margin: 0;
+    float: left;
+    color: #fff;
+    font-family: "Chancery", cursive, LiSu, sans-serif;
+    cursor: pointer;
+}
+
+.nav ul {
+    width: calc(100% - 100px);
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    float: right;
+}
+
+.nav ul li {
+    width: 100px;
+    height: 100%;
+    line-height: 50px;
+    color: #fff;
+    cursor: pointer;
+    list-style: none;
+    text-align: center;
+}
+.nav ul li a{
+    color:#fff;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.nav ul li.active {
+    background: #666;
+}
+
+.nav ul li:hover {
+    background: #666;
+}
+
+
+/* content */
+
+.content {
+    width: 100%;
+    height: calc(100% - 50px);
+    overflow: hidden;
+    display: flex;
+}
+
+.list * {
+    margin: 0;
+    padding: 0;
+}
+
+.list a,
+abbr {
+    text-decoration: none;
+}
+
+.list {
+    width: 15%;
+    height: 100%;
+    background-color: #555555;
+    overflow-y: auto;
+    font-size: 12px;
+    user-select: none;
+}
+
+.middleList {
+    width: 25%;
+    height: 100%;
+    background: #fff;
+    border-right: solid 1px #ddd;
+}
+
+.editMark {
+    width: calc(100% - 40%);
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+
+/* 侧边栏 */
+
+.list .title {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    user-select: none;
+}
+
+.list .add {
+    width: 100%;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    user-select: none;
+}
+
+.list .add:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.list .mdList {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.list ul,
+.list li,
+.list ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list .mdList li {
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    border-left: 5px solid transparent;
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.list .mdList li:hover {
+    background: #666666;
+}
+
+.list .mdList li.active {
+    background: #666666;
+    border-left-color: #f3422f;
+}
+
+.list .mdList li .mdTitle {
+    flex: 1;
+}
+
+
+/* 中间列表 */
+
+.middleList .add {
+    width: 100%;
+    margin-top: 20px;
+    color: #545454;
+    cursor: pointer;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+    letter-spacing: 2px;
+    user-select: none;
+}
+
+.middleList .add:hover {
+    color: #000;
+}
+
+.middleList .mdList {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.middleList .mdList li {
+    width: 100%;
+    height: 80px;
+    padding: 0 20px;
+    border-left: 5px solid transparent;
+    box-sizing: border-box;
+    color: #545454;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+    border-top: 1px solid #ddd;
+}
+
+.middleList .mdList li:hover {
+    background: #efefef;
+}
+
+.middleList .mdList li.active {
+    background: #efefef;
+    border-left-color: #f3422f;
+}
+
+.middleList .mdList li.push{
+    background-image: url('../img/push.png');
+    background-repeat: no-repeat;
+    background-position: right 18px top -1px;
+    background-size: 20px;
+}
+
+.middleList .mdList li .mdTitle {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* createCatgetory */
+
+.createBox {
+    width: 100%;
+    height: 80px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.createBox p {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.createBox p input {
+    border: 0;
+    outline: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    text-indent: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.createBox p #commitAdd {
+    width: 60px;
+    height: 30px;
+    border: solid #f3422f 1px;
+    background: transparent;
+    border-radius: 30px;
+    color: #f3422f;
+    cursor: pointer;
+    outline: none;
+}
+
+.createBox p #cancelAdd {
+    width: 60px;
+    height: 30px;
+    border: 0;
+    background: transparent;
+    color: #ddd;
+    cursor: pointer;
+    outline: none;
+}
+
+.createBox p #cancelAdd:hover {
+    color: #aaa;
+}
+
+/* 设置窗口 */
+.modal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    background: rgba(0,0,0,0.3);
+    display: none;
+}
+
+.modal .modal-dailog{
+    width: 400px;
+    overflow: hidden;
+    margin: 100px auto;
+}
+
+.modal .modal-dailog .modal-content{
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.modal .modal-dailog .modal-content .modal-header{
+    width: 100%;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    border-bottom: solid 1px #efefef;
+    box-sizing: border-box;
+}
+
+.modal .modal-dailog .modal-content .modal-header .modal-title{
+    flex:1;
+}
+
+.modal .modal-dailog .modal-content .modal-header button{
+    width: 30px;
+    font-size: 20px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.modal .modal-dailog .modal-content .modal-body{
+    width: 100%;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+
+.modal .modal-dailog .modal-content .modal-body .tip{
+    width: 100%;
+    color:#f3422f;
+    padding-left: 100px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.modal .modal-dailog .modal-content .modal-body p{
+    width: 100%;
+    height: 44px;
+}
+
+.modal .modal-dailog .modal-content .modal-body p span{
+    display: inline-block;
+    width:100px;
+    text-align: right;
+}
+
+.modal .modal-dailog .modal-content .modal-body p input{
+    width: calc(100% - 180px);
+    height:30px;
+    border:solid 1px #545454;
+    border-radius: 5px;
+    outline: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.modal .modal-dailog .modal-content .modal-body p input:focus{
+    box-shadow: 0 0 10px #108bfe;
+}
+
+.modal .modal-dailog .modal-content .modal-footer{
+    width: 100%;
+    height: 44px;
+    padding: 0 10px;
+    border-top: solid 1px #efefef;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.modal .modal-dailog .modal-content .modal-footer button{
+    padding: 5px 10px;
+    background: transparent;
+    border:solid 1px #545454;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: 0;
+}
+
+.modal .modal-dailog .modal-content .modal-footer #submit{
+    background: #f3422f;
+    color:#fff;
+    border-color: #f3422f;
+}
