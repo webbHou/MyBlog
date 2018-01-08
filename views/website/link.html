@@ -1,0 +1,23 @@
+{% extends 'layout.html'%} {% block head%} {%parent%}
+<link rel="stylesheet" href="/public/css/web.link.css">
+{% endblock%} {%block content%}
+<div class="navTitle">
+    <span>网站导航</span>
+</div>
+<div class="listBox">
+    {% for item in list%}
+        {% if item.link.length > 0%}
+        <div class="link">
+            <div class="category">{{item.category}}</div>
+            <div class="linkList">
+                {% for link in item.link %}
+                    {% if link.status == 1%}
+                    <a href="{{link.url}}" target="_blank">{{link.title}}</a>
+                    {% endif %}
+                {% endfor%}
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+</div>
+{%endblock%}

@@ -1,0 +1,185 @@
+/* editMark */
+
+.editMark .left {
+    width: 100%;
+    height: 100%;
+}
+
+.editMark .right {
+    width: calc(50% - 1px);
+    height: 100%;
+    border-left: solid 1px #ddd;
+    line-height: 30px;
+}
+
+.editMark .left header {
+    width: 100%;
+    height: 80px;
+}
+
+.editMark .left header input {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    outline: none;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font-size: 24px;
+}
+
+.editMark .left nav {
+    width: 100%;
+    height: 50px;
+    background: #dedede;
+    color: #545454;
+    padding: 0 20px;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.editMark .left nav div {
+    height: 100%;
+    float: left;
+}
+
+.editMark .left nav div abbr {
+    display: inline-block;
+    width: 40px;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.editMark .left nav div abbr i {
+    font-size: 20px;
+}
+
+.editMark .left nav div.saveArea {
+    float: right;
+}
+
+.editMark .left article {
+    width: 100%;
+    height: calc(100% - 80px - 50px);
+}
+
+textarea#editArea {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 0;
+    resize: none;
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: normal;
+    outline: none;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+}
+
+.editMark .right {
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #fcfaf2;
+}
+
+.editMark .right::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+
+/* table */
+
+table {
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table td,
+table th {
+    border: 1px solid #ddd;
+    padding: 5px 10px 5px 7px;
+}
+
+table th {
+    font-size: 1.1em;
+    background-color: #efefef;
+}
+
+table tr:nth-of-type(2n) td {
+    background-color: #efefef;
+}
+
+
+/* blockquote */
+
+.blog #content {
+    line-height: 30px;
+}
+.right h1{
+    margin: 40px 0;
+}
+
+.right h2 {
+    margin: 20px 0;
+}
+
+.right h3 {
+    margin: 10px 0;
+}
+
+.right ul {
+    margin: 10px 20px;
+}
+
+.right pre {
+    margin: 10px 0;
+}
+
+.right pre code {
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.right blockquote {
+    margin: 10px 0;
+}
+
+.right blockquote p {
+    width: 100%;
+    background: #ddd;
+    padding: 10px 20px;
+    border-left: solid 5px #aaa;
+    box-sizing: border-box;
+}
+
+
+/* img */
+
+img {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+}
+
+
+/* 全屏 */
+
+#editMark:-webkit-full-screen {
+    width: 100%;
+}
+
+#editMark:-moz-full-screen {
+    width: 100%;
+}
+
+#editMark:-ms-fullscreen {
+    width: 100%;
+}

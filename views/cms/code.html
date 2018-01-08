@@ -1,0 +1,34 @@
+{%extends 'layout.html'%} {%block head%} {%parent%} 
+<link rel="stylesheet" href="/public/css/cms.com.css"> {%endblock%} 
+{%block content%} {% include 'slide.html'%}
+<div class="editMark">
+    <input type="hidden" id="codeId" value="{{code.codeId}}">
+    <div>
+        <span class="title">案例标题：</span>
+        <input type="text" class="form-control" id="codeTitle" value="{{code.codeTitle}}">
+    </div>
+    <div>
+        <span class="title">查看地址：</span>
+        <input type="text" class="form-control" id="infoSrc" value="{{code.infoSrc}}">
+    </div>
+    <div>
+        <span class="title">预览地址：</span>
+        <input type="text" class="form-control" id="viewSrc" value="{{code.viewSrc}}">
+    </div>
+    <div>
+        <span class="title">源码地址：</span>
+        <input type="text" class="form-control" id="downSrc" value="{{code.downSrc}}">
+    </div>
+    <div>
+        <span class="title">上传封面：</span>
+        <input type="text" class="form-control" id="codeImg" value="{{code.codeImg}}">
+    </div>
+    <div class="btnArea">
+        <button id="saveBtn">保存</button>
+        <button id="pushBtn">发布</button>
+        <button id="resetBtn">重置</button>
+    </div>
+</div>
+{%endblock%} {%block script%} {%parent%} 
+<script src="/public/js/cms.code.js"></script>
+{%endblock%}

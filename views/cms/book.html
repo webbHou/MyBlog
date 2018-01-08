@@ -1,0 +1,30 @@
+{%extends 'layout.html'%} {%block head%} {%parent%} 
+<link rel="stylesheet" href="/public/css/cms.com.css"> {%endblock%} 
+{%block content%} {% include 'slide.html'%}
+<div class="editMark">
+    <input type="hidden" id="bookId" value="{{book.bookId}}">
+    <div>
+        <span class="title">书籍名称：</span>
+        <input type="text" class="form-control" id="bookTitle" value="{{book.bookTitle}}">
+    </div>
+    <div>
+        <span class="title">下载地址：</span>
+        <input type="text" class="form-control" id="downSrc" value="{{book.downSrc}}">
+    </div>
+    <div>
+        <span class="title">购买地址：</span>
+        <input type="text" class="form-control" id="buySrc" value="{{book.buySrc}}">
+    </div>
+    <div>
+        <span class="title">封面地址：</span>
+        <input type="text" class="form-control" id="bookImg" value="{{book.bookImg}}">
+    </div>
+    <div class="btnArea">
+        <button id="saveBtn">保存</button>
+        <button id="pushBtn">发布</button>
+        <button id="resetBtn">重置</button>
+    </div>
+</div>
+{%endblock%} {%block script%} {%parent%} 
+<script src="/public/js/cms.book.js"></script>
+{%endblock%}

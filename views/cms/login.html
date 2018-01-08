@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="stylesheet" href="/public/css/cms.login.css">
+</head>
+
+<body>
+    <div class="main" id="main">
+        <ul>
+            <li><div class="tip"></div></li>
+            <li>
+                <input type="text" name="username" id="username" placeholder="username">
+            </li>
+            <li>
+                <input type="password" name="passowrd" id="password" placeholder="password">
+            </li>
+            <li>
+                <button id="submit">登录</button>
+                <button id="reset">重置</button>
+                <a href="/" id="reback">reback</a>
+            </li>
+        </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $('#submit').on('click', function () {
+            setData();
+        });
+
+        $('#reset').on('click', function () {
+            ('#username').val('');
+            $('#password').val('');
+        });
+
+        $('#password').on('keyup', function (e) {
+            if (e.keyCode == 13) {
+                setData();
+            }
+        });
+
+        function setData() {
+            var username = $('#username').val();
+
+            if (username === '') {
+                $('.tip').html('*用户不能为空！').show();
+                return false;
+            }
+
+            var password = $('#password').val();
+
+            if (password === '') {
+                $('.tip').html('*密码不能为空！').show();
+                return false;
+            }
+
+            $.post('/cms/login', {
+                username: username,
+                password: password
+            }, function (res) {
+                if (res.success == 1) {
+                    location.href = "/cms/";
+                } else {
+                    $('.tip').html('*'+res.errMsg).show();
+                }
+            }, 'json');
+        }
+    </script>
+</body>
+
+</html>

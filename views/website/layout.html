@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="个人博客,周壮个人博客,周壮">
+    <meta name="description" content="周壮个人博客,是一个专注前端技术，扩展各项技能的个人网站，提供技术博客，和技术源码，经典书籍的个人原创网站">
+    <title>{%block title%}周壮--专注前端技术，扩展各项技能{%endblock%}</title>
+    {%block head%}
+    <link rel="stylesheet" href="/public/css/web.layout.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_474848_74corjblxzpycik9.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"> -->
+    {%endblock%} 
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?e37036f9b4dbd80e87d3f8436aaf145d";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        {% include './common/nav.html' with context only %}
+        {% include './common/header.html' with context only %}
+        <div class="main">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    {% include './common/footer.html' with context only %}
+    
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<div class="pageBox">
+    {% if page > 1%}
+    <a href="/{{main}}?page={{page-1}}"><i class="iconfont icon-fenyezuo"></i></a>
+    {% endif  %}
+    {% if pageCount < 10 %}
+        {% for item in pageArr %}
+            <a class="{{item === page}}" href="/{{main}}?page={{item}}">{{item}}</a>
+        {% endfor%}
+    {% elseif (page === 1) | (page === 2) | (page === 3) %}
+       {% set arr1 = [1,2,3,4,5]%}
+       {% for item in arr1 %}
+            <a class="{{item === page}}" href="/{{main}}?page={{item}}">{{item}}</a>
+       {% endfor%}
+       <a>...</a>
+       <a class="{{page === pageCount}}" href="/{{main}}?page={{pageCount}}"></a>
+    {%elseif (page === pageCount) | (page === pageCount-1) | (page === pageCount-2) %}
+        <a class="{{page === 1}}" href="/{{main}}?page=1"></a>
+        <a>...</a>
+        {% set arr1 = [pageCount-4,pageCount-3,pageCount-2,pageCount-1,pageCount]%}
+        {% for item in arr1 %}
+            <a class="{{item === page}}" href="/{{main}}?page={{item}}">{{item}}</a>
+        {% endfor%}
+    {%else %}
+        <a class="{{page === 1}}" href="/{{main}}?page=1"></a>
+        {% if page >= 5 %}
+        <a>...</a>
+        {% endif %}
+        {% set arr1 = [page-2,page-1,page,page+1,page+2]%}
+        {% for item in arr1 %}
+            <a class="{{item === page}}" href="/{{main}}?page={{item}}">{{item}}</a>
+        {% endfor%}
+        {% if page <= pageCount - 4%}
+        <a>...</a>
+        {% endif %}
+        <a class="{{page === pageCount}}" href="/{{main}}?page={{pageCount}}"></a>
+    {% endif %}    
+    {% if page < pageCount%}
+    <a href="/{{main}}?page={{page+1}}"><i class="iconfont icon-fenyeyou"></i></a>
+    {% endif  %}
+</div>

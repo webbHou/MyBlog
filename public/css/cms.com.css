@@ -1,0 +1,53 @@
+.editMark{
+    padding: 80px 120px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.editMark div{
+    width:100%;
+    margin: 10px 0;
+}
+
+.editMark div input{
+    display:inline-block;
+    width: 50%;
+    height: 30px;
+    outline: 0;
+    border: solid 1px #aaa;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+.editMark div input:focus{
+    box-shadow: 0 0 8px #0bb8fc;
+}
+
+.editMark .btnArea{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.editMark .btnArea button{
+    padding: 5px 10px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    font-size: 16px;
+    background:transparent;
+    border:solid 1px #545454;
+    border-radius: 4px;
+}
+
+.editMark .btnArea #saveBtn{
+    background: #0bb8fc;
+    color:#FFf;
+    border-color: #0bb8fc;
+}
+
+.editMark .btnArea #pushBtn{
+    background: #f3422f;
+    color:#FFf;
+    border-color: #f3422f;
+}

@@ -1,0 +1,36 @@
+{% extends 'layout.html'%} {% block head%} {%parent%}
+<link rel="stylesheet" href="/public/css/web.book.css"> {% endblock%} {%block content%}
+<div class="navTitle">
+    <span>阅读人生</span>
+</div>
+<div class="categoryList">
+    {% for item in category%}
+    {% if item.book.length > 0%}
+    <a href="/book/category/{{item.category}}">{{item.category}}</a>
+    {%endif%}
+    {% endfor %}
+</div>
+<div class="list">
+    <div class="listBox">
+        {% for book in list%}
+        <div class="book">
+            <div class="imgBox">
+                <img src="{{book.bookImg}}" alt="书籍图片">
+            </div>
+            <h2>{{book.bookTitle}}</h2>
+            <div class="optionArea">
+                <a href="{{book.downSrc}}" target="_blank">
+                    <i class="iconfont icon-down"></i>
+                    <span>下载</span>
+                </a>
+                <a href="{{book.buySrc}}" target="_blank">
+                    <i class="iconfont icon-goumai"></i>
+                    <span>购买</span>
+                </a>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+    {% include './common/page.html'%}
+</div>
+{%endblock%}

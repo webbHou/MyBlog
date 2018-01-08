@@ -1,0 +1,58 @@
+.listBox {
+  width: 100%;
+  overflow: hidden;
+}
+.listBox .code {
+  width: 100%;
+  height: 130px;
+  margin-top: 20px;
+  background: #fff;
+  padding: 15px;
+  padding-left: 230px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #e7ecf1;
+  position: relative;
+}
+.listBox .code .imgBox {
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+.listBox .code .imgBox img {
+  width: 100%;
+}
+.listBox .code h2 {
+  width: 100%;
+  height: 55px;
+  margin: 5px 0;
+  font-size: 18px;
+}
+.listBox .code h2 a {
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+}
+.listBox .code h2:hover a {
+  color: #0cc8e9;
+}
+.listBox .code .optionArea {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+}
+.listBox .code .optionArea a {
+  color: #000;
+  margin-right: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.listBox .code .optionArea a i {
+  margin-right: 5px;
+}
+.listBox .code .optionArea a:hover {
+  color: #0cc8e9;
+}

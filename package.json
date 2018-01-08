@@ -1,0 +1,27 @@
+{
+  "name": "mycms",
+  "version": "1.0.0",
+  "description": "个人网站的管理系统",
+  "main": "app.js",
+  "scripts": {
+    "server": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhuangZhou/MyCMS.git"
+  },
+  "author": "zhouzhuang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhuangZhou/MyCMS/issues"
+  },
+  "homepage": "https://github.com/zhuangZhou/MyCMS#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "marked": "^0.3.6",
+    "mongoose": "^4.5.7",
+    "swig": "^1.4.2"
+  }
+}

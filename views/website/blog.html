@@ -1,0 +1,51 @@
+{%extends 'layout.html'%} 
+{%block title%} {{blog.blogTitle}} {%endblock%}
+{%block head%} {%parent%}
+<link rel="stylesheet" href="/public/css/web.blog.css">
+<link rel="stylesheet" href="/public/css/monokai-sublime.css"> {%endblock%} {%block content%}
+<div class="blog">
+    <div class="blogContent">
+        <div class="title">
+            <h2>
+                <a>{{blog.blogTitle}}</a>
+            </h2>
+            <div class="view">
+                <span>
+                    <i class="iconfont icon-ren"></i>周壮</span>
+                <span>
+                    <i class="iconfont icon-yuedu"></i>阅读（{{blog.click}}）</span>
+                <span>
+                    <i class="iconfont icon-riqi"></i>{{blog.createDate}}</span>
+                <span>
+                    <i class="iconfont icon-wenjianjia"></i>
+                    <a href="/blog/category/{{blog.category}}">{{blog.category}}</a>
+                </span>
+            </div>
+        </div>
+        
+        <div id="content" data-html="{{content}}"></div>
+        <div class="pageBox">
+                {% if prev %}
+                <p><a href="/blog/blog/{{prev.blogId}}" class="prev">上一篇：{{prev.blogTitle}}</a></p>
+                {% endif %} {% if next %}
+                <p><a href="/blog/blog/{{next.blogId}}" class="next">下一篇：{{next.blogTitle}}</a></p>
+                {% endif %}
+            </div>
+            
+        {% include './common/criticism.html'%} 
+    </div>
+</div>
+<script src="/public/js/highlight.pack.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        $('#content').html($('#content').attr('data-html')).removeAttr('data-html');
+        setTimeout(function () {
+            $('pre code').each(function (i, block) {
+                hljs.highlightBlock(block);
+            });
+        }, 20);
+    });
+</script>
+{%endblock%} 
+

@@ -1,0 +1,54 @@
+<div class="categoryList list">
+    <p class="add" id="addCategory" data-tag="{{tag}}">
+        <i class="iconfont icon-tianjia mr10"></i>
+        <span>新建分类</span>
+    </p>
+    <div class="createBox none">
+        <p><input type="text" id="categoryInput" placeholder="请输入分类名"></p>
+        <p>
+            <button id="commitAdd">提交</button>
+            <button id="cancelAdd">取消</button>
+        </p>
+    </div>
+    <ul class="mdList">
+        {% for item in categories %} {% if loop.index0 == index %}
+        <li class="active" data-tag="{{tag}}" data-name="{{item.category}}" data-type="category">
+            <p class="mdTitle">{{item.category}}</p>
+            <i class="iconfont icon-shanchu delete"></i>
+        </li>
+        {% else %}
+        <li data-tag="{{tag}}" data-name="{{item.category}}" data-type="category">
+            <p class="mdTitle">{{item.category}}</p>
+            <i class="iconfont icon-shanchu delete none"></i>
+        </li>
+        {% endif %}{% endfor%}
+    </ul>
+</div>
+
+<div class="middleList list">
+    <p class="add" id="addMd" data-tag="{{tag}}" data-category="{{categories[0].category}}">
+        <i class="iconfont icon-tianjia mr10"></i>
+        <span>{{title}}</span>
+    </p>
+    <ul class="mdList">
+        {% for item in list%} {% if loop.first%}
+        {% if item.status == 1%}
+        <li class="active push" data-tag="{{tag}}" data-id="{{item.id}}" data-type="content">
+        {% else%}
+        <li class="active" data-tag="{{tag}}" data-id="{{item.id}}" data-type="content">
+        {% endif %}
+            <p class="mdTitle">{{item.title}}</p>
+            <i class="iconfont icon-shanchu delete"></i>
+        </li>
+        {% else %}
+        {% if item.status == 1%}
+        <li class="push" data-tag="{{tag}}" data-id="{{item.id}}" data-type="content">
+        {% else%}
+        <li data-tag="{{tag}}" data-id="{{item.id}}" data-type="content">
+        {% endif %}
+            <p class="mdTitle">{{item.title}}</p>
+            <i class="iconfont icon-shanchu delete none"></i>
+        </li>
+        {% endif %}{% endfor%}
+    </ul>
+</div>

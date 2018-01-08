@@ -1,0 +1,88 @@
+{% extends 'layout.html'%} {%block head%} {%parent%}
+<link rel="stylesheet" href="/public/css/web.index.css">
+{%endblock%} {%block content%}
+<div class="banner">
+    <ul class="bigImg">
+        <li>
+            <img src="/public/img/banner/banner1.jpg">
+        </li>
+        <li>
+            <img src="/public/img/banner/banner2.jpg">
+        </li>
+        <li>
+            <img src="/public/img/banner/banner3.jpg">
+        </li>
+    </ul>
+    <ul class="smallImg">
+        <li>
+            <img src="/public/img/banner/banner1.jpg">
+            <div class="timerLine"></div>
+        </li>
+        <li>
+            <img src="/public/img/banner/banner2.jpg">
+            <div class="timerLine"></div>
+        </li>
+        <li>
+            <img src="/public/img/banner/banner3.jpg">
+            <div class="timerLine"></div>
+        </li>
+    </ul>
+</div>
+
+<div class="navTitle mt-small">
+    <span>阅读人生</span>
+</div>
+
+<div class="listBox">
+    {% for book in bookList%}
+    <div class="book">
+        <div class="imgBox">
+            <img src="{{book.bookImg}}" alt="书籍图片">
+        </div>
+        <h2>{{book.bookTitle}}</h2>
+        <div class="optionArea">
+            <a href="{{book.downSrc}}" target="_blank">
+                <i class="iconfont icon-down"></i>
+                <span>下载</span>
+            </a>
+            <a href="{{book.buySrc}}" target="_blank">
+                <i class="iconfont icon-goumai"></i>
+                <span>购买</span>
+            </a>
+        </div>
+    </div>
+    {%endfor%}
+</div>
+
+<div class="navTitle mt-small">
+    <span>最新文章</span>
+</div>
+
+<div class="list">
+{% for blog in blogList %}
+<div class="blog">
+    <div class="title">
+        <h2><a href="/blog/blog/{{blog.blogId}}">{{blog.blogTitle}}</a></h2>
+        <div class="view">
+            <span>
+                <i class="iconfont icon-ren"></i>周壮</span>
+            <span>
+                <i class="iconfont icon-yuedu"></i>阅读（{{blog.click}}）</span>
+            <span>
+                <i class="iconfont icon-riqi"></i>{{blog.createDate}}</span>
+            <span>
+                <i class="iconfont icon-wenjianjia"></i>
+                <a href="/blog/category/{{blog.category}}">{{blog.category}}</a>
+            </span>
+        </div>
+    </div>
+    
+    <div class="content">
+       {{blog.content}}
+    </div>
+</div>
+{% endfor %}
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/public/js/web.index.js"></script>
+{%endblock%}
